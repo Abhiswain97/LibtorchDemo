@@ -24,10 +24,10 @@ Trying out C++ frontend for PyTorch
     ```
     > The -DCMAKE_PREFIX_PATH = the absolute path of libtorch (eg. C:\Users\.......\libtorch-win-shared-with-deps-debug-1.8.1+cpu\libtorch)
     
-*Now run it using:* <br>
+5. Now run it using: <br>
 
-on Windows: `.\Release\LibtorchDemo.exe`<br>
-on Lnux & Mac: `./Libtorch`
+    on Windows: `.\Release\LibtorchDemo.exe`<br>
+    on Lnux & Mac: `./Libtorch`
 
 ### Alternative ways
 
