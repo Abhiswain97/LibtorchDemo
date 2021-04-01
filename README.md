@@ -35,3 +35,8 @@ Trying out C++ frontend for PyTorch
 You can also use Visual Studio. That is much simpler to do. If you're interested then follow this tutorial -> [Pytorch C++ Setup on Visual Studio 2019 - Windows](https://www.youtube.com/watch?v=6eTVqYGIWx0) 
 
 > Note: this is the CPU-only version of PyTorch C++
+
+## TODO
+
+- Study & Code MNIST example
+- Train a custom NN using libtorch
