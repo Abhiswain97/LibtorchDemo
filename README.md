@@ -10,7 +10,7 @@ Trying out C++ frontend for PyTorch
 
 ### According to documentation
 
-1. Go to [this](https://download.pytorch.org/libtorch/cu102/libtorch-win-shared-with-deps-debug-1.8.1.zip) link, download the libtorch zip file. 
+1. Go to [**this**](https://download.pytorch.org/libtorch/cu102/libtorch-win-shared-with-deps-debug-1.8.1.zip) link, download the libtorch zip file. 
 2. Unzip it: This unzipped folder contains libtorch. 
 4. To keep the source folder clean we create a separate `build` directory where all the generated build files will be stored
     ```
@@ -23,7 +23,7 @@ Trying out C++ frontend for PyTorch
     cmake --build . --config Release
     ```
     > The `-DCMAKE_PREFIX_PATH` = <the absolute path to libtorch on your system> (Basically the path to the unzipped forlder in step 2 till `libtorch`) <br> 
-    > eg. C:\\Users\\.......\\libtorch-win-shared-with-deps-debug-1.8.1+cpu\\libtorch (Need to escape '\' in windows)
+    > eg. C:\\Users\\.......\\libtorch-win-shared-with-deps-debug-1.8.1+cpu\\libtorch (Need to escape '\\' in windows)
     
 5. Now run it using: <br>
 
