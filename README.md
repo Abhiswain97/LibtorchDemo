@@ -6,9 +6,9 @@ Trying out C++ frontend for PyTorch
 1. C++
 2. CMake
 
-## How to use
+## How to use (Windows)
 
-### According to documentation
+### According to documentation 
 
 1. Go to [**this**](https://download.pytorch.org/libtorch/cu102/libtorch-win-shared-with-deps-debug-1.8.1.zip) link, download the libtorch zip file. 
 2. Unzip it: This unzipped folder contains libtorch. 
@@ -28,8 +28,7 @@ Trying out C++ frontend for PyTorch
 5. Now run it using: <br>
 
     on Windows: `.\Release\LibtorchDemo.exe`<br>
-    on Lnux & Mac: `./Libtorch`
-
+   
 ### Alternative ways
 
 You can also use Visual Studio. That is much simpler to do. If you're interested then follow this tutorial -> [Pytorch C++ Setup on Visual Studio 2019 - Windows](https://www.youtube.com/watch?v=6eTVqYGIWx0) 
