@@ -25,9 +25,7 @@ Trying out C++ frontend for PyTorch
     > The `-DCMAKE_PREFIX_PATH` = <the absolute path to libtorch on your system> (Basically the path to the unzipped forlder in step 2 till `libtorch`) <br> 
     > eg. C:\\Users\\.......\\libtorch-win-shared-with-deps-debug-1.8.1+cpu\\libtorch (Need to escape '\\' in windows)
     
-5. Now run it using: <br>
-
-    on Windows: `.\Release\LibtorchDemo.exe`<br>
+5. Now run it using: `.\Release\LibtorchDemo.exe`<br>
    
 ### Alternative ways
 
@@ -37,5 +35,5 @@ You can also use Visual Studio. That is much simpler to do. If you're interested
 
 ## TODO
 
-- Study & Code MNIST example
+- Setup GPU version of Libtorch
 - Train a custom NN using libtorch
