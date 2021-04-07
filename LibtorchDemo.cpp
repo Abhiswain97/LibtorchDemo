@@ -1,14 +1,20 @@
-﻿// LibtorchDemo.cpp : Defines the entry point for the application.
-//
-
-#include "LibtorchDemo.h"
-
-#include <torch/torch.h>
-
-using namespace std;
+﻿#include <torch/torch.h>
+#include <iostream>
 
 int main()
 {
-	cout << torch::randn({3, 2});
-	return 0;
+	torch::Tensor x = torch::randn({5, 5});
+
+	std::cout << "Checking for cuda avalability: " << std::endl;
+	if (torch::cuda::is_available())
+	{
+		std::cout << "cuda is available" << std::endl;
+	}
+	else
+	{
+		std::cout << "cuda is not available" << std::endl;
+	}
+
+	std::cout << x.to(torch::kCUDA) << std::endl;
+	std::cout << x.to(torch::kCPU) << std::endl;
 }
