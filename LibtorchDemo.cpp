@@ -33,12 +33,12 @@ int main()
 	if (torch::cuda::is_available())
 	{
 		std::cout << "cuda is available!" << std::endl;
+		std::cout << x.to(at::kCUDA) << std::endl;
+		std::cout << x.to(at::kCPU) << std::endl;
 	}
 	else
 	{
 		std::cout << "cuda is not available" << std::endl;
+		std::cout << x.to(at::kCPU) << std::endl;
 	}
-
-	std::cout << x.to(torch::kCUDA) << std::endl;
-	std::cout << x.to(torch::kCPU) << std::endl;
 }
