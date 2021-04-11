@@ -19,3 +19,11 @@ Trying out C++ frontend for PyTorch
    ```
 
 4. Do `sh run.sh <absolute path to libtorch>`
+
+5. If everything goes well, then below is what you should see:
+
+<img src="libtorchdemo.png">
+
+<br>
+
+> Note: In our case only the `CPUFloatType{5, 5}` tensor prints, as we have installed the cpu-olny version of libtorch.
