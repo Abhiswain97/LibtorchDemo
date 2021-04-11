@@ -26,4 +26,4 @@ Trying out C++ frontend for PyTorch
 
 <br>
 
-> Note: In our case only the `CPUFloatType{5, 5}` tensor prints, as we have installed the cpu-olny version of libtorch.
+> Note: In our case only the `CPUFloatType{5, 5}` tensor will print, as we have installed the cpu-olny version of libtorch. However, I have the CUDA version also that's why you see two tensors print
