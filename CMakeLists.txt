@@ -6,7 +6,6 @@ cmake_minimum_required (VERSION 3.8)
 project(LibtorchDemo)
 
 find_package(Torch REQUIRED)
-set(Torch_DIR "/home/abhishek/libtorch/share/cmake/Torch")
 
 set(CXXFLAGS "-W -Wall -Wextra -Werror -std=c++14")
 
