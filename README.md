@@ -22,7 +22,9 @@ Trying out C++ frontend for PyTorch
 
 5. If everything goes well, then below is what you should see:
 
-<img src="libtorchdemo.png">
+<center>
+   <img src="libtorchdemo.jpg">
+</center>
 
 <br>
 
