@@ -12,10 +12,14 @@ int main()
 		std::cout << "cuda is available!" << std::endl;
 		std::cout << x.to(at::kCUDA) << std::endl;
 		std::cout << x.to(at::kCPU) << std::endl;
+
+		std::cout << "libtorch-gpu & libtorch-cpu is setup properly!" << std::endl;
 	}
 	else
 	{
 		std::cout << "cuda is not available" << std::endl;
 		std::cout << x.to(at::kCPU) << std::endl;
+
+		std::cout << "Only libtorch-cpu is setup properly!" << std::endl;
 	}
 }
