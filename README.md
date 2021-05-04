@@ -22,7 +22,6 @@ Trying out C++ frontend for PyTorch
 
 5. If everything goes well, then below is what you should see:
 
-<<<<<<< HEAD
 ```
 (base) ➜  LibtorchDemo git:(main) ✗ sh run.sh ~/libtorch
 Creating build folder and building the project
@@ -87,11 +86,6 @@ cuda is available!
 [ CPUFloatType{5,5} ]
 libtorch-gpu & libtorch-cpu is setup properly!
 ```
-=======
-<p align="center">
-   <img src="libtorchdemo.jpg">
-</p>
->>>>>>> main
 
 <br>
 
