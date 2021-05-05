@@ -53,14 +53,7 @@ Creating build folder and building the project
 -- Caffe2: Header version is: 11.2
 -- Found CUDNN: /usr/lib/x86_64-linux-gnu/libcudnn.so
 -- Found cuDNN: v8.1.1  (include: /usr/include, library: /usr/lib/x86_64-linux-gnu/libcudnn.so)
-CMake Warning at /home/abhishek/libtorch/share/cmake/Caffe2/public/cuda.cmake:198 (message):
-  Failed to compute shorthash for libnvrtc.so
-Call Stack (most recent call first):
-  /home/abhishek/libtorch/share/cmake/Caffe2/Caffe2Config.cmake:88 (include)
-  /home/abhishek/libtorch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)
-  CMakeLists.txt:10 (find_package)
-
-
+-- /usr/local/cuda/lib64/libnvrtc.so shorthash is 369df368
 -- Autodetected CUDA architecture(s):  6.1
 -- Added CUDA NVCC flags for: -gencode;arch=compute_61,code=sm_61
 -- Found Torch: /home/abhishek/libtorch/lib/libtorch.so
@@ -72,17 +65,17 @@ Call Stack (most recent call first):
 [100%] Built target LibtorchDemo
 Checking for cuda avalability:
 cuda is available!
- 1.0837 -0.0564  0.4666  0.5129 -0.7607
--0.5698  0.1865  0.1026  1.0061  1.7183
- 0.1814  1.3431 -0.3151 -0.6504  0.1164
- 0.3590  0.7787 -0.3857 -2.4460  0.7244
--0.8373  0.8216 -1.3187 -1.4756 -0.1081
+ 1.0814  0.8394  0.0384 -0.2273  1.0203
+ 0.2249 -0.4426 -0.5200  1.2232 -1.4246
+ 0.8897  0.2271 -2.1782  1.2484  0.5803
+-1.4917  0.8680 -0.4567 -0.8395 -1.2555
+-1.3380 -1.3143  0.8531  0.6529  0.2630
 [ CUDAFloatType{5,5} ]
- 1.0837 -0.0564  0.4666  0.5129 -0.7607
--0.5698  0.1865  0.1026  1.0061  1.7183
- 0.1814  1.3431 -0.3151 -0.6504  0.1164
- 0.3590  0.7787 -0.3857 -2.4460  0.7244
--0.8373  0.8216 -1.3187 -1.4756 -0.1081
+ 1.0814  0.8394  0.0384 -0.2273  1.0203
+ 0.2249 -0.4426 -0.5200  1.2232 -1.4246
+ 0.8897  0.2271 -2.1782  1.2484  0.5803
+-1.4917  0.8680 -0.4567 -0.8395 -1.2555
+-1.3380 -1.3143  0.8531  0.6529  0.2630
 [ CPUFloatType{5,5} ]
 libtorch-gpu & libtorch-cpu is setup properly!
 ```

@@ -6,6 +6,7 @@ cmake_minimum_required (VERSION 3.8)
 project(LibtorchDemo)
 
 set(Torch_DIR "/home/abhishek/libtorch/share/cmake/Torch")
+set(PYTHON_EXECUTABLE "/home/abhishek/miniconda3/bin/python")
 
 find_package(Torch REQUIRED)
 
