@@ -83,9 +83,16 @@ Trying out C++ frontend for PyTorch
    
    C:\Users\abhi0\Desktop\LibtorchDemo\build>cmake --build . --config Release
    ```
-   > A lot of warnings will pop-up after this. Don't worry about it
    
-6. Run it:
+   > A lot of warnings will pop-up after this. Don't worry about it. In the end you should see something like this:
+   
+   ```
+   Creating library C:/Users/abhi0/Desktop/LibtorchDemo/build/Release/LibtorchDemo.lib and object C:/Users/abhi0/Desktop/LibtorchDemo/build/Release/LibtorchDemo.exp
+     LibtorchDemo.vcxproj -> C:\Users\abhi0\Desktop\LibtorchDemo\build\Release\LibtorchDemo.exe
+     Building Custom Rule C:/Users/abhi0/Desktop/LibtorchDemo/CMakeLists.txt
+   ```
+   
+6. Now, run it:
    ```
    C:\Users\abhi0\Desktop\LibtorchDemo\build>Release\LibtorchDemo.exe
    Checking for cuda avalability:
