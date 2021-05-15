@@ -17,10 +17,29 @@ Trying out C++ frontend for PyTorch
    git clone https://github.com/Abhiswain97/LibtorchDemo.git
    cd LibtorchDemo
    ```
+4. For Linux your CMakeLists.txt should contain:
 
-4. Do `sh run.sh <absolute path to libtorch>`
+```
+cmake_minimum_required (VERSION 3.8)
 
-5. If everything goes well, then below is what you should see:
+project(LibtorchDemo)
+
+set(Torch_DIR "/home/abhishek/libtorch/share/cmake/Torch")
+set(PYTHON_EXECUTABLE "/home/abhishek/miniconda3/bin/python")
+
+find_package(Torch REQUIRED)
+
+set(CXXFLAGS "-W -Wall -Wextra -Werror -std=c++14")
+
+# Add source to this project's executable.
+add_executable(LibtorchDemo "LibtorchDemo.cpp")
+
+target_link_libraries(LibtorchDemo "${TORCH_LIBRARIES}")
+```
+
+5. Do `sh run.sh <absolute path to libtorch>`
+
+6. If everything goes well, then below is what you should see:
 
 ```
 (base) ➜  LibtorchDemo git:(main) ✗ sh run.sh ~/libtorch
