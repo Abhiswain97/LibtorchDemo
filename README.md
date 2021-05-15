@@ -43,7 +43,67 @@ Trying out C++ frontend for PyTorch
                         $<TARGET_FILE_DIR:LibtorchDemo>)
    endif (MSVC)
    ```
+5. Next we build the project:
+   ```
+   C:\Users\abhi0\Desktop\LibtorchDemo>mkdir build
 
+   C:\Users\abhi0\Desktop\LibtorchDemo>cd build
+
+   C:\Users\abhi0\Desktop\LibtorchDemo\build>cmake -DCMAKE_PREFIX_PATH="D:\libtorch-Windows\libtorch-win-shared-with-deps-debug-1.8.1+cu111" .. -Wno-dev
+   -- Building for: Visual Studio 16 2019
+   -- The C compiler identification is MSVC 19.28.29915.0
+   -- The CXX compiler identification is MSVC 19.28.29915.0
+   -- Detecting C compiler ABI info
+   -- Detecting C compiler ABI info - done
+   -- Check for working C compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.28.29910/bin/Hostx64/x64/cl.exe - skipped
+   -- Detecting C compile features
+   -- Detecting C compile features - done
+   -- Detecting CXX compiler ABI info
+   -- Detecting CXX compiler ABI info - done
+   -- Check for working CXX compiler: C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.28.29910/bin/Hostx64/x64/cl.exe - skipped
+   -- Detecting CXX compile features
+   -- Detecting CXX compile features - done
+   -- Looking for pthread.h
+   -- Looking for pthread.h - not found
+   -- Found Threads: TRUE
+   -- Found CUDA: C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.2 (found version "11.2")
+   -- Caffe2: CUDA detected: 11.2
+   -- Caffe2: CUDA nvcc is: C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.2/bin/nvcc.exe
+   -- Caffe2: CUDA toolkit directory: C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.2
+   -- Caffe2: Header version is: 11.2
+   -- Found CUDNN: C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.2/lib/x64/cudnn.lib
+   -- Found cuDNN: v8.1.0  (include: C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.2/include, library: C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.2/lib/x64/cudnn.lib)
+   -- C:/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v11.2/lib/x64/nvrtc.lib shorthash is aa1d5a72
+   -- Autodetected CUDA architecture(s):  6.1
+   -- Added CUDA NVCC flags for: -gencode;arch=compute_61,code=sm_61
+   -- Found Torch: D:/libtorch-Windows/libtorch-win-shared-with-deps-debug-1.8.1+cu111/libtorch/lib/torch.lib
+   -- Configuring done
+   -- Generating done
+   -- Build files have been written to: C:/Users/abhi0/Desktop/LibtorchDemo/build
+   
+   C:\Users\abhi0\Desktop\LibtorchDemo\build>cmake --build . --config Release
+   ```
+   > A lot of warnings will pop-up after this. Don't worry about it
+   
+6. Run it:
+   ```
+   C:\Users\abhi0\Desktop\LibtorchDemo\build>Release\LibtorchDemo.exe
+   Checking for cuda avalability:
+   cuda is available!
+   -0.7165  0.9098 -1.1877 -0.6031 -0.1732
+    0.1130 -2.1874 -0.0105  1.7941 -1.0881
+   -0.2693 -0.7711  0.7421  1.1620 -1.1526
+    0.7818 -0.3584  0.1884  1.0382 -0.7380
+    0.8461 -0.2769 -1.6092 -0.1090  0.1348
+   [ CUDAFloatType{5,5} ]
+   -0.7165  0.9098 -1.1877 -0.6031 -0.1732
+    0.1130 -2.1874 -0.0105  1.7941 -1.0881
+   -0.2693 -0.7711  0.7421  1.1620 -1.1526
+    0.7818 -0.3584  0.1884  1.0382 -0.7380
+    0.8461 -0.2769 -1.6092 -0.1090  0.1348
+   [ CPUFloatType{5,5} ]
+   libtorch-gpu & libtorch-cpu is setup properly!
+   ```
 
 ## How to use (Linux)
 
