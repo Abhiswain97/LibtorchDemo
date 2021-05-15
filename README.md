@@ -9,7 +9,41 @@ Trying out C++ frontend for PyTorch
 
 ## How to use (Windows)
 
-coming soon ...
+1. Download libtorch from: [here](https://download.pytorch.org/libtorch/cpu/libtorch-win-shared-with-deps-debug-1.8.1%2Bcpu.zip)
+2. Unzip it. This is the libtorch path.
+3. Clone this repo:
+
+   ```
+   git clone https://github.com/Abhiswain97/LibtorchDemo.git
+   cd LibtorchDemo
+   ```
+4. For Windows your CMakeLists.txt should contain:
+
+   ```
+   cmake_minimum_required(VERSION 3.0 FATAL_ERROR)
+   project(LibtorchDemo)
+
+   set(Torch_DIR "D:\\libtorch-Windows\\libtorch-win-shared-with-deps-debug-1.8.1+cu111\\libtorch\\share\\cmake\\Torch")
+   find_package(Torch REQUIRED)
+   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${TORCH_CXX_FLAGS}")
+
+   add_executable(LibtorchDemo LibtorchDemo.cpp)
+   target_link_libraries(LibtorchDemo "${TORCH_LIBRARIES}")
+   set_property(TARGET LibtorchDemo PROPERTY CXX_STANDARD 14)
+
+   # The following code block is suggested to be used on Windows.
+   # According to https://github.com/pytorch/pytorch/issues/25457,
+   # the DLLs need to be copied to avoid memory errors.
+   if (MSVC)
+     file(GLOB TORCH_DLLS "${TORCH_INSTALL_PREFIX}/lib/*.dll")
+     add_custom_command(TARGET LibtorchDemo
+                        POST_BUILD
+                        COMMAND ${CMAKE_COMMAND} -E copy_if_different
+                        ${TORCH_DLLS}
+                        $<TARGET_FILE_DIR:LibtorchDemo>)
+   endif (MSVC)
+   ```
+
 
 ## How to use (Linux)
 
@@ -105,4 +139,5 @@ libtorch-gpu & libtorch-cpu is setup properly!
 
 <br>
 
-> Note: In our case only the `CPUFloatType{5, 5}` tensor will print, as we have installed the cpu-olny version of libtorch. However, I have the CUDA version also that's why you see two tensors print
+> Note 1: The `Torch_DIR` has to be set respectively. It mostly lies inside `<absolute path to libtorch>/libtorch/share/cmake/Torch`  
+> Note 2: In our case only the `CPUFloatType{5, 5}` tensor will print, as we have installed the cpu-olny version of libtorch. However, I have the CUDA version also that's why you see two tensors print
