@@ -7,6 +7,10 @@ Trying out C++ frontend for PyTorch
 1. C++
 2. CMake
 
+## How to use (Windows)
+
+coming soon ...
+
 ## How to use (Linux)
 
 1. `wget https://download.pytorch.org/libtorch/cpu/libtorch-cxx11-abi-shared-with-deps-1.8.1%2Bcpu.zip`
