@@ -45,7 +45,7 @@ Trying out C++ frontend for PyTorch
    ```
 5. You need to set the `Torch_DIR` in CMakeLists.txt to absolute path to `Torch`. In step 2, indside the libtorch folder, `Torch` is inside `libtorch\\share\\cmake\\Torch`. Mostly the standard CMakeLists.txt doesn't throw up any error even if you don't set the `Torch_DIR`. Incase it does, you set the `Torch_DIR` 
  
-6. Do `run <absolute path to libtorch>`
+6. Do `run.bat <absolute path to libtorch>`
 
 7. If everything goes well, then below is what you should see:
    ```
