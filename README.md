@@ -43,7 +43,7 @@ Trying out C++ frontend for PyTorch
                         $<TARGET_FILE_DIR:LibtorchDemo>)
    endif (MSVC)
    ```
-5. You need to change the `Torch_DIR` to absolute path to `Torch_DIR`. In step 2, indside the libtorch folder, `Torch_DIR` is inside `libtorch\\share\\cmake\\Torch` 
+5. You need to set the `Torch_DIR` in CMakeLists.txt to absolute path to `Torch`. In step 2, indside the libtorch folder, `Torch` is inside `libtorch\\share\\cmake\\Torch`. Mostly the standard CMakeLists.txt doesn't throw up any error even if you don't set the `Torch_DIR`. Incase it does, you set the `Torch_DIR` 
  
 6. Next we build the project:
    ```
