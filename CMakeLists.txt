@@ -3,6 +3,7 @@ project(LibtorchDemo)
 
 set(Torch_DIR "D:\\libtorch-Windows\\libtorch-win-shared-with-deps-debug-1.8.1+cu111\\libtorch\\share\\cmake\\Torch")
 set(PYTHON_EXECUTABLE "C:\\Users\\abhi0\\anaconda3\\python")
+
 find_package(Torch REQUIRED)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${TORCH_CXX_FLAGS}")
 
