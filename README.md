@@ -49,8 +49,8 @@ Trying out C++ frontend for PyTorch
 
 7. If everything goes well, then below is what you should see:
    ```
-   C:\Users\abhi0\Desktop\LibtorchDemo>run "D:\libtorch-Windows\libtorch-win-shared-with-deps-debug-1.8.1+cu111"
-   "path to libtorch is: "D:\libtorch-Windows\libtorch-win-shared-with-deps-debug-1.8.1+cu111""
+   C:\Users\abhi0\Desktop\LibtorchDemo>run.bat "D:\libtorch-Windows\libtorch-win-shared-with-deps-debug-1.8.1+cu111"
+   path to libtorch is: "D:\libtorch-Windows\libtorch-win-shared-with-deps-debug-1.8.1+cu111"
    -- Building for: Visual Studio 16 2019
    -- The C compiler identification is MSVC 19.28.29915.0
    -- The CXX compiler identification is MSVC 19.28.29915.0
@@ -81,37 +81,26 @@ Trying out C++ frontend for PyTorch
    -- Configuring done
    -- Generating done
    -- Build files have been written to: C:/Users/abhi0/Desktop/LibtorchDemo/build
-   Microsoft (R) Build Engine version 16.9.0+5e4b48a27 for .NET Framework
-   Copyright (C) Microsoft Corporation. All rights reserved.
 
-     Checking Build System
-     Building Custom Rule C:/Users/abhi0/Desktop/LibtorchDemo/CMakeLists.txt
-     LibtorchDemo.cpp
-   ```
-   
-   > A lot of warnings will pop-up after this. Don't worry about it. In the end you should see something like this:
-   
-   ```
-   Creating library C:/Users/abhi0/Desktop/LibtorchDemo/build/Release/LibtorchDemo.lib and object C:/Users/abhi0/Desktop/LibtorchDemo/build/Release/LibtorchDemo.exp
-     LibtorchDemo.vcxproj -> C:\Users\abhi0\Desktop\LibtorchDemo\build\Release\LibtorchDemo.exe
-     Building Custom Rule C:/Users/abhi0/Desktop/LibtorchDemo/CMakeLists.txt
+   Build finished. Executable created. Running it!
+
    Checking for cuda avalability:
    cuda is available!
-    1.3923  0.7079  0.4619 -0.4083  0.7384
-    1.2682 -0.5516  1.6411 -0.2552 -0.9505
-   -0.8779 -0.6661 -1.0510 -1.1464 -1.3216
-    0.6051 -0.4334 -0.7860  0.9712 -1.0182
-    0.2284  2.0316  2.5062 -0.1086  0.2452
+    0.8093 -1.1354 -0.2401 -0.0059  0.7970
+    1.0390  1.2386 -0.4145  1.4510  0.6607
+   -0.9958  0.6723 -0.5838 -0.0190 -0.4640
+   -0.0024 -0.1334 -1.2071 -0.3401 -0.9488
+    0.4475  0.1180 -0.0469 -0.1800 -0.4797
    [ CUDAFloatType{5,5} ]
-    1.3923  0.7079  0.4619 -0.4083  0.7384
-    1.2682 -0.5516  1.6411 -0.2552 -0.9505
-   -0.8779 -0.6661 -1.0510 -1.1464 -1.3216
-    0.6051 -0.4334 -0.7860  0.9712 -1.0182
-    0.2284  2.0316  2.5062 -0.1086  0.2452
+    0.8093 -1.1354 -0.2401 -0.0059  0.7970
+    1.0390  1.2386 -0.4145  1.4510  0.6607
+   -0.9958  0.6723 -0.5838 -0.0190 -0.4640
+   -0.0024 -0.1334 -1.2071 -0.3401 -0.9488
+    0.4475  0.1180 -0.0469 -0.1800 -0.4797
    [ CPUFloatType{5,5} ]
    libtorch-gpu & libtorch-cpu is setup properly!
    ```
-
+  
 ## How to use (Linux)
 
 1. `wget https://download.pytorch.org/libtorch/cpu/libtorch-cxx11-abi-shared-with-deps-1.8.1%2Bcpu.zip`
