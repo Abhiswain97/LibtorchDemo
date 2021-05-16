@@ -45,13 +45,12 @@ Trying out C++ frontend for PyTorch
    ```
 5. You need to set the `Torch_DIR` in CMakeLists.txt to absolute path to `Torch`. In step 2, indside the libtorch folder, `Torch` is inside `libtorch\\share\\cmake\\Torch`. Mostly the standard CMakeLists.txt doesn't throw up any error even if you don't set the `Torch_DIR`. Incase it does, you set the `Torch_DIR` 
  
-6. Next we build the project:
+6. Do `run <absolute path to libtorch>`
+
+7. If everything goes well, then below is what you should see:
    ```
-   C:\Users\abhi0\Desktop\LibtorchDemo>mkdir build
-
-   C:\Users\abhi0\Desktop\LibtorchDemo>cd build
-
-   C:\Users\abhi0\Desktop\LibtorchDemo\build>cmake -DCMAKE_PREFIX_PATH="D:\libtorch-Windows\libtorch-win-shared-with-deps-debug-1.8.1+cu111" .. -Wno-dev
+   C:\Users\abhi0\Desktop\LibtorchDemo>run "D:\libtorch-Windows\libtorch-win-shared-with-deps-debug-1.8.1+cu111"
+   "path to libtorch is: "D:\libtorch-Windows\libtorch-win-shared-with-deps-debug-1.8.1+cu111""
    -- Building for: Visual Studio 16 2019
    -- The C compiler identification is MSVC 19.28.29915.0
    -- The CXX compiler identification is MSVC 19.28.29915.0
@@ -82,8 +81,12 @@ Trying out C++ frontend for PyTorch
    -- Configuring done
    -- Generating done
    -- Build files have been written to: C:/Users/abhi0/Desktop/LibtorchDemo/build
-   
-   C:\Users\abhi0\Desktop\LibtorchDemo\build>cmake --build . --config Release
+   Microsoft (R) Build Engine version 16.9.0+5e4b48a27 for .NET Framework
+   Copyright (C) Microsoft Corporation. All rights reserved.
+
+     Checking Build System
+     Building Custom Rule C:/Users/abhi0/Desktop/LibtorchDemo/CMakeLists.txt
+     LibtorchDemo.cpp
    ```
    
    > A lot of warnings will pop-up after this. Don't worry about it. In the end you should see something like this:
@@ -92,24 +95,19 @@ Trying out C++ frontend for PyTorch
    Creating library C:/Users/abhi0/Desktop/LibtorchDemo/build/Release/LibtorchDemo.lib and object C:/Users/abhi0/Desktop/LibtorchDemo/build/Release/LibtorchDemo.exp
      LibtorchDemo.vcxproj -> C:\Users\abhi0\Desktop\LibtorchDemo\build\Release\LibtorchDemo.exe
      Building Custom Rule C:/Users/abhi0/Desktop/LibtorchDemo/CMakeLists.txt
-   ```
-   
-7. Now, run it:
-   ```
-   C:\Users\abhi0\Desktop\LibtorchDemo\build>Release\LibtorchDemo.exe
    Checking for cuda avalability:
    cuda is available!
-   -0.7165  0.9098 -1.1877 -0.6031 -0.1732
-    0.1130 -2.1874 -0.0105  1.7941 -1.0881
-   -0.2693 -0.7711  0.7421  1.1620 -1.1526
-    0.7818 -0.3584  0.1884  1.0382 -0.7380
-    0.8461 -0.2769 -1.6092 -0.1090  0.1348
+    1.3923  0.7079  0.4619 -0.4083  0.7384
+    1.2682 -0.5516  1.6411 -0.2552 -0.9505
+   -0.8779 -0.6661 -1.0510 -1.1464 -1.3216
+    0.6051 -0.4334 -0.7860  0.9712 -1.0182
+    0.2284  2.0316  2.5062 -0.1086  0.2452
    [ CUDAFloatType{5,5} ]
-   -0.7165  0.9098 -1.1877 -0.6031 -0.1732
-    0.1130 -2.1874 -0.0105  1.7941 -1.0881
-   -0.2693 -0.7711  0.7421  1.1620 -1.1526
-    0.7818 -0.3584  0.1884  1.0382 -0.7380
-    0.8461 -0.2769 -1.6092 -0.1090  0.1348
+    1.3923  0.7079  0.4619 -0.4083  0.7384
+    1.2682 -0.5516  1.6411 -0.2552 -0.9505
+   -0.8779 -0.6661 -1.0510 -1.1464 -1.3216
+    0.6051 -0.4334 -0.7860  0.9712 -1.0182
+    0.2284  2.0316  2.5062 -0.1086  0.2452
    [ CPUFloatType{5,5} ]
    libtorch-gpu & libtorch-cpu is setup properly!
    ```
