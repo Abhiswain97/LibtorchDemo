@@ -10,14 +10,14 @@ Trying out C++ frontend for PyTorch
 ## How to use (Windows)
 
 1. Download libtorch from: [here](https://download.pytorch.org/libtorch/cpu/libtorch-win-shared-with-deps-debug-1.8.1%2Bcpu.zip)
-2. Unzip it. This is the libtorch path.
+2. Unzip it. Inside it is the libtorch folder. This is your path to libtorch
 3. Clone this repo:
 
    ```
    git clone https://github.com/Abhiswain97/LibtorchDemo.git
    cd LibtorchDemo
    ```
-4. For Windows your CMakeLists.txt should contain:
+4. For Windows your CMakeLists.txt should contain (by default this repo is made to run on Windows):
 
    ```
    cmake_minimum_required(VERSION 3.0 FATAL_ERROR)
@@ -43,7 +43,9 @@ Trying out C++ frontend for PyTorch
                         $<TARGET_FILE_DIR:LibtorchDemo>)
    endif (MSVC)
    ```
-5. Next we build the project:
+5. You need to change the `Torch_DIR` to absolute path to `Torch_DIR`. In step 2, indside the libtorch folder, `Torch_DIR` is inside `libtorch\\share\\cmake\\Torch` 
+ 
+6. Next we build the project:
    ```
    C:\Users\abhi0\Desktop\LibtorchDemo>mkdir build
 
@@ -92,7 +94,7 @@ Trying out C++ frontend for PyTorch
      Building Custom Rule C:/Users/abhi0/Desktop/LibtorchDemo/CMakeLists.txt
    ```
    
-6. Now, run it:
+7. Now, run it:
    ```
    C:\Users\abhi0\Desktop\LibtorchDemo\build>Release\LibtorchDemo.exe
    Checking for cuda avalability:
