@@ -1,11 +1,7 @@
 FROM ubuntu:18.04
 
 RUN apt-get update 
-<<<<<<< HEAD
 RUN apt-get install -y gcc g++ build-essential libssl-dev cmake wget unzip python3-dev git
-=======
-RUN apt-get install -y gcc g++ build-essential libssl-dev cmake wget unzip python3-dev
->>>>>>> linux
 
 ARG path=libtorch-cxx11-abi-shared-with-deps-1.8.1+cpu
 
@@ -18,19 +14,11 @@ RUN git clone https://github.com/Abhiswain97/LibtorchDemo.git \
     && git checkout linux \
     && rm -r .gitignore .gitattributes README.md
 
-<<<<<<< HEAD
 WORKDIR /LibtorchDemo
 
 RUN /bin/bash -c "apt install make && mkdir build"
 
 WORKDIR /LibtorchDemo/build
-=======
-WORKDIR /src
-
-RUN /bin/bash -c "apt install make && mkdir build"
-
-WORKDIR /src/build
->>>>>>> linux
 
 RUN /bin/bash -c "cmake -DCMAKE_PREFIX_PATH=/libtorch .. && make"
 
