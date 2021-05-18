@@ -1,8 +1,8 @@
 if [ -d "./build" ]; then
 	echo "Build folder exists, rebuilding and executing"
 	cd build
-	make
-    	./LibtorchDemo
+	make 
+	./LibtorchDemo
 	cd ..	
 else
 	echo "Creating build folder and building the project"
