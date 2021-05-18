@@ -4,7 +4,6 @@ Trying out C++ frontend for PyTorch
 
 ## Requirements
 
-<<<<<<< HEAD
 Just install docker!
 
 ## Use with docker
@@ -27,26 +26,7 @@ Just install docker!
    [ CPUFloatType{5,5} ]
    Only libtorch-cpu is setup properly!
    ```
-=======
-1. C++
-2. CMake
-  
-## How to use (Linux)
->>>>>>> linux
 
 > Note: This is only cpu version of libtorch
 
 
-<<<<<<< HEAD
-=======
-## Use with docker
-
-
-
-
-
-> Note 1: The `Torch_DIR` has to be set respectively. It mostly lies inside `<absolute path to libtorch>/libtorch/share/cmake/Torch`  
-> Note 2: In our case only the `CPUFloatType{5, 5}` tensor will print, as we have installed the cpu-olny version of libtorch. However, I have the CUDA version also that's why you see two tensors print
-
-
->>>>>>> linux
