@@ -2,7 +2,7 @@
 
 project(LibtorchDemo)
 
-set(Torch_DIR "libtorch-cxx11-abi-shared-with-deps-1.8.1+cpu/libtorch/share/cmake/Torch")
+set(Torch_DIR "/libtorch/share/cmake/Torch")
 set(PYTHON_EXECUTABLE "/usr/bin/python3")
 
 find_package(Torch REQUIRED)
