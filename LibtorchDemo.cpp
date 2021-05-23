@@ -1,5 +1,4 @@
-﻿#include <torch/torch.h>
-#include <iostream>
+﻿#include "LibtorchDemo.h"
 
 int main()
 {

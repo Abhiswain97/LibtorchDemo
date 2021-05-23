@@ -7,7 +7,7 @@ set(PYTHON_EXECUTABLE "C:\\Users\\abhi0\\anaconda3\\python")
 find_package(Torch REQUIRED)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${TORCH_CXX_FLAGS}")
 
-add_executable(LibtorchDemo LibtorchDemo.cpp)
+add_executable(LibtorchDemo LibtorchDemo.h LibtorchDemo.cpp)
 target_link_libraries(LibtorchDemo "${TORCH_LIBRARIES}")
 set_property(TARGET LibtorchDemo PROPERTY CXX_STANDARD 14)
 
