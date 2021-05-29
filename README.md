@@ -11,8 +11,6 @@ Trying out C++ frontend for PyTorch
 
 Check out my other repo [libtorch-cpu-docker](https://github.com/Abhiswain97/libtorch-cpu-docker) to see how to use with docker
 
-> Note: This is only cpu version of libtorch
-
 ## How to use (Windows)
 
 1. Download libtorch from: [here](https://download.pytorch.org/libtorch/cpu/libtorch-win-shared-with-deps-debug-1.8.1%2Bcpu.zip)
